@@ -1,0 +1,12 @@
+HEASDGSE
+
+<%= form_with url: "/search", method: :get do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+
+  <%= form.radio_button :age, "child" %>
+  <%= form.label :age_child, "I am younger than 21" %>
+  <%= form.radio_button :age, "adult" %>
+  <%= form.label :age_adult, "I am over 21" %>
+<% end %>
