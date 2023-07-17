@@ -1,8 +1,7 @@
-<h1>Hello, World!</h1>
 <%time = Time.now %>
 <p>Текущее время: <%= time %></p>
 
-<p>Вопрос</p>
-<p><%= @question.body %></p>
+<p class="title-lg mb">Вопрос <%= @question.id %></p>
+<p class="mb-sm"><%= @question.body %></p>
 <p>User_id: <b><%= @question.user_id %>></b></p>
-<p><%= link_to "Все вопросы", "/questions" %></p>
+<p class="mt"><%= link_to "Все вопросы", "/questions" %></p>

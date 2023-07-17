@@ -1,10 +1,12 @@
-<h1>страница создания вопроса</h1>
+<h1 class="title-lg mb">страница создания вопроса</h1>
 
 <form action="/questions", method="post">
   <p><label for="question[body]">текст вопроса</label></p>
   <p><textarea name = "question[body]" rows=5></textarea></p>
-  <p><label for="question[user_id]">User ID</label></p>
+  <p class="mt"><label for="question[user_id]">User ID</label></p>
   <p><input type="number" name="question[user_id]"></p>
-  <p><input type="submit" value="создать"></p>
+  <p class="mt"><input type="submit" value="создать"></p>
+
+  <p class="mt"><%=link_to "Все вопросы", "/questions" %></p>
 
 </form>

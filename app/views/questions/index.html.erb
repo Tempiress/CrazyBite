@@ -1,5 +1,7 @@
-<h2>Вопросы</h2>
+<h2 class="title-lg mb">Вопросы</h2>
 
 <% @questions.each do |question| %>
-  <p> <%= link_to "Вопрос#{question.id}", "/questions/#{question.id}"%></p>
+  <p class="mb-sm"> <%= link_to "Вопрос #{question.id}", "/questions/#{question.id}"%></p>
 <% end %>
+
+<p class="mt"><%=link_to 'Создать новый вопрос', "questions/new"%></p>
