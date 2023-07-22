@@ -1,5 +1,14 @@
 body{
+    color: #03071E;
     font-family: 'Trebuchet MS', sans-Serif;
+}
+
+a{
+    color: #DC2f02
+}
+
+a:hover{
+    color: #730E15;
 }
 
 .title-lg{
@@ -16,5 +25,9 @@ body{
 
 .text-sm{
     font-size: 80%;
+}
+
+.link-question{
+    font-size: large;
 }
 

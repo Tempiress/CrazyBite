@@ -1,7 +1,10 @@
-<%time = Time.now %>
-<p>Текущее время: <%= time %></p>
+<div class="container">
+  <%time = Time.now %>
+  <p>Текущее время: <%= time %></p>
 
-<p class="title-lg mb">Вопрос <%= @question.id %></p>
-<p class="mb-sm"><%= @question.body %></p>
-<p>User_id: <b><%= @question.user_id %>></b></p>
-<p class="mt"><%= link_to "Все вопросы", "/questions" %></p>
+  <p class="title-lg mb">Вопрос <%= @question.id %></p>
+  <p class="mb-sm"><%= @question.body %></p>
+  <p>User_id: <b><%= @question.user_id %></b></p>
+  <p class="mt"><%= link_to "Все вопросы", "/questions" %></p>
+  <%= link_to fa_icon('pencil') %>
+</div>

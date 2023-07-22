@@ -1,12 +1,27 @@
-HEASDGSE
+<%= stylesheet_link_tag('main')%>
+<div class="wrapper">
+  <header class="header">
+    <h1>Mr. Tempire</h1>
+  </header>
 
-<%= form_with url: "/search", method: :get do |form| %>
-  <%= form.label :query, "Search for:" %>
-  <%= form.text_field :query %>
-  <%= form.submit "Search" %>
+  <aside class="left">
+    <%= image_tag "avatar.jpg", alt: "Изображение не загружено(", class: "avatar"%>
+    <ul>
+      <li><a class="active" href="">Home</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="/questions">Questions <- рабочая</a></li>
+    </ul>
+  </aside>
 
-  <%= form.radio_button :age, "child" %>
-  <%= form.label :age_child, "I am younger than 21" %>
-  <%= form.radio_button :age, "adult" %>
-  <%= form.label :age_adult, "I am over 21" %>
-<% end %>
+  <main class="content">
+  <h1 style="font-size: 30px; padding: 6px; color: black;">Обо мне</h1>
+    <ul>
+      <li><p>Программист</p></li>
+      <li><p>Студент 3 курса</p></li>
+    </ul>
+  </main>
+</div>
+  <footer class="footer">
+    &copy; Copyright Mr.Tempire
+  </footer>
