@@ -1,3 +1,11 @@
+<header class="header">
+  <%= link_to 'Главная', "/", class: "btn"%>
+  <%= link_to 'вопросы', "/questions", class: "btn" %>
+</header>
+
+
+<div class="container">
+
 <h1 class="title-lg mb">страница создания вопроса</h1>
 
 <form action="/questions", method="post">
@@ -10,3 +18,5 @@
   <p class="mt"><%=link_to "Все вопросы", "/questions" %></p>
 
 </form>
+
+</div>

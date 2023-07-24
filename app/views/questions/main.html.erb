@@ -1,27 +1,43 @@
-<%= stylesheet_link_tag('main')%>
-<div class="wrapper">
-  <header class="header">
-    <h1>Mr. Tempire</h1>
-  </header>
+<header class="header">
+  <%= link_to 'Главная', "/", class: "btn"%>
+  <%= link_to 'вопросы', "/questions", class: "btn" %>
+</header>
 
-  <aside class="left">
-    <%= image_tag "avatar.jpg", alt: "Изображение не загружено(", class: "avatar"%>
-    <ul>
-      <li><a class="active" href="">Home</a></li>
-      <li><a href="">Contact</a></li>
-      <li><a href="">About</a></li>
-      <li><a href="/questions">Questions <- рабочая</a></li>
-    </ul>
-  </aside>
+<div class="container">
+  <h1 class="title-lg" >Данил Варламов</h1>
+  <h4 class="title-sm">Программист, студент ЮФУ мехмата</h4>
 
-  <main class="content">
-  <h1 style="font-size: 30px; padding: 6px; color: black;">Обо мне</h1>
-    <ul>
-      <li><p>Программист</p></li>
-      <li><p>Студент 3 курса</p></li>
+
+  <div class="info">
+  <hr>
+    <h1 class="title">Обо мне</h1>
+
+    <ul style="list-style-type: none">
+    <li>Студент 2 курса</li>
+    <li>Программист</li>
     </ul>
-  </main>
+
+  </div>
+
+  <div class="skills">
+    <table>
+    <h1 class="title"> Мои Умения</h1>
+      <tr>
+        <th>Умение 1</th>
+        <th>Умение 2</th>
+        <th>Умение 3</th>
+        <th>Умение 4</th>
+      </tr>
+
+      <tr>
+        <th>C#/C++</th>
+        <th>WinForms/WPF</th>
+        <th>Unity</th>
+        <th>HTML/CSS</th>
+      </tr>
+
+    </table>
+  </div>
+
+
 </div>
-  <footer class="footer">
-    &copy; Copyright Mr.Tempire
-  </footer>
