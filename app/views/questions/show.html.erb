@@ -3,8 +3,9 @@
   <p>Текущее время: <%= time %></p>
 
   <p class="title-lg mb">Вопрос <%= @question.id %></p>
-  <p class="mb-sm"><%= @question.body %></p>
-  <p>User_id: <b><%= @question.user_id %></b></p>
-  <p class="mt"><%= link_to "Все вопросы", "/questions" %></p>
-  <%= link_to fa_icon('pencil') %>
+
+  <%= render 'question', question: @question %>
+
+  <p class="mt btn"><%= link_to "Все вопросы", "/questions", class: "BtnQ"%></p>
+
 </div>

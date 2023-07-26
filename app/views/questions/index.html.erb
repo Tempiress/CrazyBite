@@ -3,15 +3,18 @@
   <%= link_to 'вопросы', "/questions", class: "btn" %>
 </header>
 
-<div class="container">
+<div class="container mt-sm">
+  <h2 class="title-lg"> Все вопросы</h2>
+</div>
 
-  <h2 class="title-lg mb">Вопросы</h2>
 
   <% @questions.each do |question| %>
-    <p class="mb-sm link-question"> <%= link_to "Вопрос #{question.id}", "/questions/#{question.id}"%></p>
+    <div class="mt-sm container">
+        <%= render question %>
+    </div>
   <% end %>
 
-  <p class="mt"><%=link_to 'Создать новый вопрос', "questions/new", class: "BtnNewQ"%></p>
-
-
+<div class="container">
+    <%= render 'form' %>
 </div>
+

@@ -1,0 +1,11 @@
+
+  <form action="/questions", method="post">
+    <p><label for="question[body]">текст вопроса</label></p>
+    <p><textarea name = "question[body]" rows=5></textarea></p>
+    <p class="mt"><label for="question[user_id]">User ID</label></p>
+    <p><input type="number" name="question[user_id]"></p>
+    <p class="mt"><input type="submit" value="сохранить"></p>
+
+    <p class="mt"><%=link_to "Все вопросы", "/questions" %></p>
+
+  </form>

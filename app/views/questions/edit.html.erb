@@ -1,3 +1,8 @@
+<header class="header">
+  <%= link_to 'Главная', "/", class: "btn"%>
+  <%= link_to 'вопросы', "/questions", class: "btn" %>
+</header>
+
 <div class="container">
   <h2 class="title-lg mb">редактирование вопроса <% @question.id %></h2>
 
@@ -6,7 +11,8 @@
     <p><%= form.text_area :body, rows: 5 %></p>
     <p class="mt"><%=form.label :user_id %></p>
     <p><%=form.text_field :user_id%></p>
-    <p class="mt"><%=form.submit 'Сохранить' %>
+    <p class="mt"><%=form.submit 'Сохранить' %></p>
+
 
   <% end %>
 

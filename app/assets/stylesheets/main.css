@@ -24,20 +24,23 @@ th {
     padding: 8px;
 }
 
+.btn_edit_q{
+    display: flex;
+    padding: 12px 6px;
+}
+.btn_edit_q i{
+    padding: 5px;
+}
 
 
 
-
-.BtnNewQ{
-    margin-left: 10px;
-    margin-top: 30px;
+.BtnQ{
     background-color: #730E15;
+    color: white;
     text-decoration: none;
-    padding: 15px 15px;
-    border-radius: 100px;
-    width: 40px;
-    height: 15px;
-    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-size: 12px;
 }
 
 
