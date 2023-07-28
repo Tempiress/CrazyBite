@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
       user_id: params[:question][:user_id]
       )
 
-    redirect_to "/questions"
+    redirect_to "/questions", notice: "Успешная регистрация"
   end
 
 
