@@ -1,7 +1,3 @@
-<header class="header">
-  <%= link_to 'Главная', "/", class: "btn"%>
-  <%= link_to 'вопросы', "/questions", class: "btn" %>
-</header>
 
 <div class="container">
   <h1 class="title-lg" >Данил Варламов</h1>
@@ -37,7 +33,20 @@
       </tr>
 
     </table>
+
+      <div class="img_generate" style="float: inherit">
+        <img src="<%= @img %>"></img>
+
+          <%= form_with do |form| %>
+            <%= form.submit "GENERATE!", class: "BtnQ"  %>
+          <% end %>
+
+      </div>
+
+
+
   </div>
 
 
 </div>
+

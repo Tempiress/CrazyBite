@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     user = User.create(
       name: params[:user][:name],
       nickname: params[:user][:nickname],
-      email: params[:user][:email]
+      email: params[:user][:email],
+      password: params[:user][:password]
     )
 
     redirect_to "/", notice: "Успешная регистрация!"

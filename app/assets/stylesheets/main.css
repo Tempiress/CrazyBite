@@ -65,4 +65,7 @@ th {
 
 */
 
-
+.user_login_pad{
+    float: right;
+    display: flex;
+}

@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  include ApplicationHelper
   def create
 
     question = Question.create(
@@ -7,7 +8,7 @@ class QuestionsController < ApplicationController
       user_id: params[:question][:user_id]
       )
 
-    redirect_to "/questions", notice: "Успешная регистрация"
+    redirect_to "/questions", notice: "Вопрос добавлен успешно"
   end
 
 
@@ -49,7 +50,9 @@ class QuestionsController < ApplicationController
   end
 
   def main
-
+    @img = inclination('https://dog.ceo/api/breeds/image/random')
   end
+
+
 
 end

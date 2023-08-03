@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get 'questions/:id', to: 'questions#show'
   get '/questions', to: 'questions#index'
 
+  resource :session, only: %i[new create destroy]
   resources :users, only: %i[new create]
 
-  resources :session, only: %i[new create]
 
 end

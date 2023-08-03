@@ -11,6 +11,33 @@
   </head>
 
   <body>
+
+  <header class="header">
+    <%= link_to 'Главная', "/", class: "btn"%>
+    <%= link_to 'вопросы', "/questions", class: "btn" %>
+
+    <div class="user_login_pad">
+      <% if current_user.present? %>
+        <p class="mr-sm"><%= "@#{current_user.nickname}" %></p>
+        <%= button_to "Выйти", session_path, method: :delete, class: ""  %>
+
+      <% else %>
+        <%= link_to 'Регистрация', new_user_path, class: "BtnQ" %>
+        <%= link_to 'Вход', new_session_path, class: "BtnQ" %>
+      <% end %>
+    </div>
+  </header>
+
+
+  <% if flash[:notice].present? %>
+    <p class="mb mt message-notice" ><%= flash[:notice] %></p>
+    <% end %>
+
+  <% if flash[:alert].present? %>
+    <p class="mb mt message-alert" ><%= flash[:alert] %></p>
+  <% end %>
+
+
     <%= yield %>
   </body>
 </html>
