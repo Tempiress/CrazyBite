@@ -9,13 +9,8 @@ module ApplicationHelper
 
     re = response.body
 
+    jp = JSON.parse(re)['message']
 
-    match = re.match(/"message":"(.*?)"/)
-
-    if match
-      url = match[1]
-      return url
-    end
 
   end
 
